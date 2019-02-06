@@ -16,5 +16,5 @@ This is a script to receive and build configured branches for an Android app fro
     ```
     Would you like to wait [y/n]?: y
     ```
-
-3. After the script completes then an html report will be opened in your browser session. 
+3. After the script completes then an html report will be opened in your browser session.
+![](report.png)
