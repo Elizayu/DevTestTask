@@ -1,0 +1,154 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:2:1-21:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\ab820391b904f86dedc1491fdeb060d4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6e6f8956b0b3f6de80d083c77c1993f5\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\2a66815a7d5abcac87d74d41c4e95b5d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\22b49af5de9a9d875dc4d72bac9dac50\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\e6fde7e2836c73638b5e68d46d55b418\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\d536c31382eb4758cc5c4fccabed960e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\4ab68535a59e240a06c927a9f15bbe0c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\ce4424ee570e108d93ae72cfe36e5842\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\759fed59a4c5b2b687617ded6ccc1923\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\13afc295d3ffdad0437156187b7226a8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\90036f9010dec4ed62fa86ce2834ca4d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\f243297a8cf0165d882a4f8110761487\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\734714dcca28e01661ed9196c7f84c92\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\8f9e5591e0b221ad8366de1a07cda1f9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\36cc48baa1c58f7303f08354f4061c20\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\f8ee697372841edd1385ae7073e024b4\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\9e8cac478f3fee6507a7d38815e8dc97\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c16dcad5a3255a2b42e5ece2e450000c\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5801dacc04f32fa1b5f9897a3621365e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\8ec541e21b074c9d700583a4dd666a5a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\79d27df6b5fe76055cc8809efd24d5fc\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\eed4d3f10e625082269323b93677bc45\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\8abf60fee160dda37eee135ba1e55faa\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\e472c4da8c5f23b56dfe3a1bca12fd38\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\feb1332b3f5f9bcfd4a14b28cf2b2fd1\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\a7781ab7739ce5a20d741fee758d7347\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\ad35f7a07d19ab369bc8bf9d3508ed88\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:3:5-38
+		INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:2:1-21:12
+		INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:2:1-21:12
+		INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6e6f8956b0b3f6de80d083c77c1993f5\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6e6f8956b0b3f6de80d083c77c1993f5\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\f8ee697372841edd1385ae7073e024b4\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\f8ee697372841edd1385ae7073e024b4\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\9e8cac478f3fee6507a7d38815e8dc97\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\9e8cac478f3fee6507a7d38815e8dc97\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\f8ee697372841edd1385ae7073e024b4\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.devtesttask.MainActivity
+ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml:16:27-74
+uses-sdk
+INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\ab820391b904f86dedc1491fdeb060d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\ab820391b904f86dedc1491fdeb060d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6e6f8956b0b3f6de80d083c77c1993f5\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6e6f8956b0b3f6de80d083c77c1993f5\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\2a66815a7d5abcac87d74d41c4e95b5d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\2a66815a7d5abcac87d74d41c4e95b5d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\22b49af5de9a9d875dc4d72bac9dac50\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\22b49af5de9a9d875dc4d72bac9dac50\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\e6fde7e2836c73638b5e68d46d55b418\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\e6fde7e2836c73638b5e68d46d55b418\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\d536c31382eb4758cc5c4fccabed960e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\d536c31382eb4758cc5c4fccabed960e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\4ab68535a59e240a06c927a9f15bbe0c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\4ab68535a59e240a06c927a9f15bbe0c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\ce4424ee570e108d93ae72cfe36e5842\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\ce4424ee570e108d93ae72cfe36e5842\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\759fed59a4c5b2b687617ded6ccc1923\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\759fed59a4c5b2b687617ded6ccc1923\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\13afc295d3ffdad0437156187b7226a8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\13afc295d3ffdad0437156187b7226a8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\90036f9010dec4ed62fa86ce2834ca4d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\90036f9010dec4ed62fa86ce2834ca4d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\f243297a8cf0165d882a4f8110761487\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\f243297a8cf0165d882a4f8110761487\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\734714dcca28e01661ed9196c7f84c92\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\734714dcca28e01661ed9196c7f84c92\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\8f9e5591e0b221ad8366de1a07cda1f9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\8f9e5591e0b221ad8366de1a07cda1f9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\36cc48baa1c58f7303f08354f4061c20\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\36cc48baa1c58f7303f08354f4061c20\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\f8ee697372841edd1385ae7073e024b4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\f8ee697372841edd1385ae7073e024b4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\9e8cac478f3fee6507a7d38815e8dc97\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\9e8cac478f3fee6507a7d38815e8dc97\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c16dcad5a3255a2b42e5ece2e450000c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c16dcad5a3255a2b42e5ece2e450000c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5801dacc04f32fa1b5f9897a3621365e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5801dacc04f32fa1b5f9897a3621365e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\8ec541e21b074c9d700583a4dd666a5a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\8ec541e21b074c9d700583a4dd666a5a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\79d27df6b5fe76055cc8809efd24d5fc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\79d27df6b5fe76055cc8809efd24d5fc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\eed4d3f10e625082269323b93677bc45\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\eed4d3f10e625082269323b93677bc45\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\8abf60fee160dda37eee135ba1e55faa\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\8abf60fee160dda37eee135ba1e55faa\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\e472c4da8c5f23b56dfe3a1bca12fd38\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\e472c4da8c5f23b56dfe3a1bca12fd38\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\feb1332b3f5f9bcfd4a14b28cf2b2fd1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\feb1332b3f5f9bcfd4a14b28cf2b2fd1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\a7781ab7739ce5a20d741fee758d7347\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\a7781ab7739ce5a20d741fee758d7347\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\ad35f7a07d19ab369bc8bf9d3508ed88\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\v-elyuda\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\ad35f7a07d19ab369bc8bf9d3508ed88\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\v-elyuda\AndroidStudioProjects\DevTestTask\app\src\main\AndroidManifest.xml
