@@ -9,6 +9,7 @@ param
     [Parameter(Mandatory = $false)]
     $appName = "DevTaskTest"
 )
+#function to perform post request to app canter api
 function  Post-AppCenterRequest {
     param
     (
@@ -22,6 +23,8 @@ function  Post-AppCenterRequest {
         Throw "An error occured while $uri"
     }
 }
+
+#function to perform get request to app canter api
 function  Get-AppCenterRequest {
     param
     (
@@ -33,113 +36,92 @@ function  Get-AppCenterRequest {
         if ($request) {
             return $request
         } else {
-            
+
         }
     } catch {
         Throw "An error occured while $uri"
     }
 }
+function Get-ActiveBuilds {
+    [CmdletBinding()]
+    param
+    (
+        $appBranches
+    )
+    $activeBranchesWithBuilds = @()
+    foreach ($br in $appBranches) {
+
+        $branchBuilds = @()
+        $branchName = $br.branch.name
+
+        if ($br.configured -eq $true) {
+            $branchBuildsUri = "$baseUri/$owner/$appName/branches/$($branchName.Replace('/','%2F'))/builds"
+            $branchBuilds = Get-AppCenterRequest -uri $branchBuildsUri
+            $activeBranchBuilds = ($branchBuilds | Where-Object {$_.status -ne "completed"})
+            $activeBranchesWithBuilds += @{Branch = $br; Builds = $activeBranchBuilds; LatestCommit = $br.branch.commit; LatestBuild = $br.lastBuild}
+        }
+    }
+    return $activeBranchesWithBuilds
+}
 
 $baseUri = "https://api.appcenter.ms/v0.1/apps"
 $report = @()
-
 $branchesUri = "$baseUri/$owner/$appName/branches"
 $appBranches = Get-AppCenterRequest -uri $branchesUri
 
-foreach ($br in $appBranches) {
+#getting actual configured bracnhes with active builds
+$actualBranches = @()
+$actualBranches = Get-ActiveBuilds -appBranches $appBranches
+$activeBranchesWithBuildsCount = $actualBranches.builds | Measure-Object
 
-    $branchBuilds = @()
-    $branchName = $br.branch.name
+#to remember builds that should be built
+$hasPendingBuilds = $true
+$hasBuildInProgress = $false
 
-    if ($br.configured -eq $true) {
-        $branchBuildsUri = "$baseUri/$owner/$appName/branches/$($branchName.Replace('/','%2F'))/builds"
-        $branchBuilds = Get-AppCenterRequest -uri $branchBuildsUri
-        $count = ($branchBuilds | Where-Object {$_.status -ne "completed"}) | Measure-Object
+#do while there are builds in a queue or some builds in progress or non started (to be sure that a branch is built)
+while ($hasPendingBuilds -or $hasBuildInProgress) {
 
-        if ($count.Count -lt 2) {
-            do {
+    $hasPendingBuilds = $false
+    #loop through all configured branches
+    foreach ($item in $actualBranches) {
+
+        $branchName = $item.Branch.branch.name
+        $actualBranches = Get-ActiveBuilds -appBranches $appBranches
+        $activeBranchesWithBuildsCount = $actualBranches.builds | Measure-Object
+
+        #can't queue any builds if there have been already two queued or running
+        if ($activeBranchesWithBuildsCount.Count -lt 2) {
+
+            #to verify if a build should be build (if there have been already builds on a latest commit)
+            if ($item.LatestCommit.sha -ne $item.LatestBuild.sourceVersion) {
+                #build
+                $branchBuildsUri = "$baseUri/$owner/$appName/branches/$($branchName.Replace('/','%2F'))/builds"
                 $createdBuild = Post-AppCenterRequest -uri $branchBuildsUri
+
                 if ($createdBuild.id) {
-                    Write-Output "Build #$($createdBuild.id) in $($branchName) was queued"                    
-                    $count.Count++
+                    Write-Host "Build #$($createdBuild.id) in $($branchName) was queued"
                 }
-            } while ($count.Count -le 1)
+            } else {
+                continue
+            }
         } else {
-            Write-Warning "There are almoust $($count.Count) builds in $($branchName) builds queued"
+            #if there are builds in a queue then we should wait until they finish
+            $hasPendingBuilds = $true
+
+            #wait some time to let the queued builds finith
+            $flag = Read-Host "Would you like to wait [y/n]?"
+            if ($flag -eq "y") {
+                Start-Sleep -Seconds 10
+            }
         }
-        $latestCompletedBuild = $branchBuilds | Where-Object {$_.status -eq "completed"} | select -First 1
-        $report += @{Branch = $branchName ; LatestBuild = $latestCompletedBuild}
-    } else {
-        Write-Warning "The branch $branchName hasn't been configured yet to run builds"
-    }    
+    }
+    #when branch loop ends then we are to check if there are queued builds left to be sure the branch is built
+    $actualBranches = Get-ActiveBuilds -appBranches $appBranches
+    $activeBranchesWithBuildsCount = $actualBranches.builds | Measure-Object
+    $hasBuildInProgress = ($activeBranchesWithBuildsCount -eq 0)
 }
 
-$body = ""
-$head = '
-<style>
-	body {
-        font-family: "Calibri";
-	    font-size:11.0pt;
-	}
-    table {
-        border-collapse: collapse;
-    }
-    th {
-	    font-family:"Calibri";
-	    font-size:11.0pt;
-	    font-weight: normal;
-        text-align: center;
-    }
-    td {
-	    font-family:"Calibri";
-	    font-size:10.0pt;
-        border: 1px solid black;
-        padding: 4px;
-    }
-  </style>
-'
-$body += "
-<p>Below there is a summary of the latest builds in branches</p>
-<table border = 1>
-    <tr>
-        <th>Branch Name</th>
-        <th>Build Id</th>
-        <th>Build Status</th>
-        <th>Duration (min)</th>
-        <th>Link to Build Logs</th>
-    </tr>
-    "
-foreach ($r in $report) {
-
-     $branchName = $r.Branch
-    if ($r.LatestBuild) {       
-        $buildId = $r.LatestBuild.id
-        $buildResult = $r.LatestBuild.Result
-        $buildDuration = [math]::Round((New-TimeSpan -end $R.LatestBuild.finishTime -Start $R.LatestBuild.startTime).TotalMinutes, 4)
-        $buildLogsLinkUri = "$baseUri/$owner/$appName/builds/$buildId/downloads/logs"
-        $logsLink = (Get-AppCenterRequest -uri $buildLogsLinkUri).uri
-
-        $body += "<tr>
-            <td>$branchName</td>
-            <td>$buildId</td>
-            <td>$buildResult</td>
-            <td>$buildDuration</td>
-            <td><a href=$logsLink>Link</a></td>
-            </tr>
-        "
-    } else {
-        $body += "<tr>
-            <td>$branchName</td>
-            <td>No completed builds</td>
-            <td>--</td>
-            <td>--</td>
-            <td><a href=-->Link</a></td>
-            </tr>
-        "
-    }
-}
-
-$outFilePath = "$env:USERPROFILE\AppData\Local\Temp\devTestTaskReport.html"
-(ConvertTo-Html -Head $head -Body $body) | Out-File $outFilePath
-
-Invoke-Item $outFilePath
+$actualBranches | % { $report += $_  }
+Import-Module "$PSScriptRoot\Compose-HTMLReport.ps1" -Force
+$htmlReport = Compose-HTMLReport -report $report
+Invoke-Item -Path $htmlReport
