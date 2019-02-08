@@ -1,75 +1,21 @@
 [CmdletBinding()]
 param
 (
-    #set to false just for test purposes
     [Parameter(Mandatory = $true)]
     $token = "",
     [Parameter(Mandatory = $false)]
-    $owner = "v-elyuda-microsoft.com",
+    $owner = "",
     [Parameter(Mandatory = $false)]
-    $appName = "DevTaskTest"
+    $appName = ""
 )
-#function to perform post request to app canter api
-function  Post-AppCenterRequest {
-    param
-    (
-        [Parameter(Mandatory = $true)]
-        $uri
-    )
-    try {
-        $request = Invoke-RestMethod -Method Post -Uri $uri -Headers @{'X-Api-Token' = $token} -ContentType "application/json"
-        return $request
-    } catch {
-        Throw "An error occured while $uri"
-    }
-}
-
-#function to perform get request to app canter api
-function  Get-AppCenterRequest {
-    param
-    (
-        [Parameter(Mandatory = $true)]
-        $uri
-    )
-    try {
-        $request = Invoke-RestMethod -Method Get -Uri $uri -Headers @{'X-Api-Token' = $token} -ContentType "application/json"
-        if ($request) {
-            return $request
-        } else {
-
-        }
-    } catch {
-        Throw "An error occured while $uri"
-    }
-}
-function Get-ActiveBuilds {
-    [CmdletBinding()]
-    param
-    (
-        $appBranches
-    )
-    $activeBranchesWithBuilds = @()
-    foreach ($br in $appBranches) {
-
-        $branchBuilds = @()
-        $branchName = $br.branch.name
-
-        if ($br.configured -eq $true) {
-            $branchBuildsUri = "$baseUri/$owner/$appName/branches/$($branchName.Replace('/','%2F'))/builds"
-            $branchBuilds = Get-AppCenterRequest -uri $branchBuildsUri
-            $activeBranchBuilds = ($branchBuilds | Where-Object {$_.status -ne "completed"})
-            $activeBranchesWithBuilds += @{Branch = $br; Builds = $activeBranchBuilds; LatestCommit = $br.branch.commit; LatestBuild = $br.lastBuild}
-        }
-    }
-    return $activeBranchesWithBuilds
-}
+. "$PSScriptRoot/Functions.ps1"
 
 $baseUri = "https://api.appcenter.ms/v0.1/apps"
-$report = @()
 $branchesUri = "$baseUri/$owner/$appName/branches"
 $appBranches = Get-AppCenterRequest -uri $branchesUri
+$builtBranchesSummary = @()
 
-#getting actual configured bracnhes with active builds
+#getting actual configured branches with active builds
 $actualBranches = @()
 $actualBranches = Get-ActiveBuilds -appBranches $appBranches
 $activeBranchesWithBuildsCount = $actualBranches.builds | Measure-Object
@@ -120,8 +66,6 @@ while ($hasPendingBuilds -or $hasBuildInProgress) {
     $activeBranchesWithBuildsCount = $actualBranches.builds | Measure-Object
     $hasBuildInProgress = ($activeBranchesWithBuildsCount -eq 0)
 }
-
-$actualBranches | % { $report += $_  }
-Import-Module "$PSScriptRoot\Compose-HTMLReport.ps1" -Force
-$htmlReport = Compose-HTMLReport -report $report
+$actualBranches | % { $builtBranchesSummary += $_  }
+$htmlReport = Compose-BuiltBranchesHTMLReport -branchesToReport $builtBranchesSummary
 Invoke-Item -Path $htmlReport

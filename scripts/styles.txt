@@ -1,0 +1,21 @@
+<style>
+    body {
+        font-family: "Calibri";
+        font-size:11.0pt;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    th {
+        font-family:"Calibri";
+        font-size:11.0pt;
+        font-weight: normal;
+        text-align: center;
+    }
+    td {
+        font-family:"Calibri";
+        font-size:10.0pt;
+        border: 1px solid black;
+        padding: 4px;
+    }
+</style>
