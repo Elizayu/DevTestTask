@@ -21,6 +21,7 @@ function  Get-AppCenterRequest {
     )
     try {
         $request = Invoke-RestMethod -Method Get -Uri $uri -Headers @{'X-Api-Token' = $token} -ContentType "application/json"
+        return $request
     } catch {
         Throw "$_.Exception `n error requesting $uri"
     }
