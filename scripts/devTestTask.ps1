@@ -37,7 +37,6 @@ while ($hasPendingBuilds -or $hasBuildInProgress) {
 
         #can't queue any builds if there have been already two queued or running
         if ($activeBranchesWithBuildsCount.Count -lt 2) {
-
             #to verify if a build should be build (if there have been already builds on a latest commit)
             if ($item.LatestCommit.sha -ne $item.LatestBuild.sourceVersion) {
                 #build
@@ -48,12 +47,13 @@ while ($hasPendingBuilds -or $hasBuildInProgress) {
                     Write-Host "Build #$($createdBuild.id) in $($branchName) was queued"
                 }
             } else {
+                Write-Host "There are no new commits in branch $branchName"
+                #moving to the next branch
                 continue
             }
         } else {
             #if there are builds in a queue then we should wait until they finish
             $hasPendingBuilds = $true
-
             #wait some time to let the queued builds finith
             $flag = Read-Host "Would you like to wait [y/n]?"
             if ($flag -eq "y") {
