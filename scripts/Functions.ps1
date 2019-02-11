@@ -1,5 +1,6 @@
 # a function to perform post request to app canter api
 function  Post-AppCenterRequest {
+    [CmdletBinding()]
     param
     (
         [Parameter(Mandatory = $true)]
@@ -14,6 +15,7 @@ function  Post-AppCenterRequest {
 }
 # a function to perform get request to app canter api
 function  Get-AppCenterRequest {
+    [CmdletBinding()]
     param
     (
         [Parameter(Mandatory = $true)]
@@ -30,10 +32,11 @@ function  Get-AppCenterRequest {
 function Get-ActiveBuilds {
     [CmdletBinding()]
     param
-    (
+    (   [Parameter(Mandatory = $true)]
         $appBranches
     )
     $configuredBranches = @()
+    $branchesSummary = @()
     foreach ($br in $appBranches) {
 
         $branchBuilds = @()
@@ -46,7 +49,10 @@ function Get-ActiveBuilds {
             $configuredBranches += @{Branch = $br; Builds = $activeBranchBuilds; LatestCommit = $br.branch.commit; LatestBuild = $br.lastBuild}
         }
     }
-    return $configuredBranches
+    $count = $configuredBranches.Builds | Measure-Object
+    $hasbuildInProgress = !($count.Count -eq 0)
+    $branchesSummary = @{Branches = $configuredBranches; ActiveBuildsCount = $count; Flag = $hasbuildInProgress}
+    return $branchesSummary
 }
 # a function to convert gathered info about each branch to HTML table
 function Compose-BuiltBranchesHTMLReport {
@@ -101,4 +107,28 @@ function Compose-BuiltBranchesHTMLReport {
     $outFilePath = "$env:USERPROFILE\AppData\Local\Temp\devTestTaskReport.html"
     (ConvertTo-Html -Head $head -Body $body) | Out-File $outFilePath
     return $outFilePath
+}
+#a function to submit a new build in a branch if there has been no a build on the latest commit yet
+function  Check-GoingToBuild {
+    [CmdletBinding()]
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        $branchInfo
+    )
+    if ($branchInfo.LatestCommit.sha -ne $branchInfo.LatestBuild.sourceVersion) {
+        $branchBuildsUri = "$baseUri/$owner/$appName/branches/$($branchName.Replace('/','%2F'))/builds"
+        $createdBuild = Post-AppCenterRequest -uri $branchBuildsUri
+        return $createdBuild
+    } else {
+        return $false
+    }
+}
+#a function which allows to wait for some to let some build finish
+function Wait-QueueIsDrained {
+    $flag = Read-Host "Would you like to wait 10 sec for some build finish [y/n]?"
+    if ($flag -eq "y") {
+        Start-Sleep -Seconds 10
+        # $actualBranches = Get-ActiveBuilds -appBranches $appBranches
+    }
 }
